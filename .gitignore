@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Raw and instrument data are never versioned.
+data/raw/
+data/processed/
+*.xls
+*.xlsx
+
+# Full runs are regenerated locally; curated outputs are in results/reference.
+results/run/
+results/reproduction_run/
+results/reference/train_test_split.csv
+results/reference/test_predictions.csv
+*.joblib
+*.npz

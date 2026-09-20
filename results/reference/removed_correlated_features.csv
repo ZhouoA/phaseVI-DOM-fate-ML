@@ -1,0 +1,5 @@
+removed_feature,retained_feature,pearson_r,r_squared,threshold,mean_absolute_correlation_left,mean_absolute_correlation_right,reason
+P,P/C,0.9896581380788001,0.9794232302655974,0.8,,,elemental ratio retained over corresponding atom count
+DBE/C,H/C,-0.942753568990434,0.8887842918442012,0.8,0.3238817267298772,0.35747365719514224,higher mean absolute correlation with the remaining predictors
+S,S/C,0.9318025133281691,0.8682559238446927,0.8,,,elemental ratio retained over corresponding atom count
+N,N/C,0.9316384352148152,0.8679501739695094,0.8,,,elemental ratio retained over corresponding atom count

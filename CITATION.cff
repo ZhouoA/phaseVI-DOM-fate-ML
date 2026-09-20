@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release."
+title: "Phase VI DOM fate machine learning"
+type: software
+authors:
+  - name: "ZhouoA"
+version: 1.0.0
+date-released: 2026-09-20
+repository-code: "https://github.com/ZhouoA/phaseVI-DOM-fate-ML"
+license: MIT
+keywords:
+  - dissolved organic matter
+  - FT-ICR MS
+  - random forest
+  - SHAP
+  - landfill leachate
+  - PD/A

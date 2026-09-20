@@ -1,0 +1,102 @@
+{
+  "created": "2026-09-20T19:16:47.325788+08:00",
+  "script": "src/analyze_phaseVI_dom_fate_ml.py",
+  "script_sha256": "56dbd96e855c7df71720d049e2ccd058819320666a64094133e7915a913b00df",
+  "inputs": [
+    {
+      "role": "processed_dataset",
+      "file": "data/processed/phaseVI_dom_fate_dataset.csv",
+      "sha256": "88f353ab4678cd47008b7db5559065e19420db57525929f5e2855b2d9b1fce90"
+    }
+  ],
+  "processed_dataset": "results/reproduction_run/processed/phaseVI_dom_fate_dataset.csv",
+  "config": {
+    "seed": 20260920,
+    "test_size": 0.3,
+    "cv_folds": 5,
+    "r2_threshold": 0.8,
+    "lower_fc": 0.5,
+    "upper_fc": 2.0
+  },
+  "features_initial": [
+    "O/C",
+    "MW",
+    "H",
+    "DBE-O",
+    "NOSC",
+    "S/C",
+    "O",
+    "S",
+    "C",
+    "H/C",
+    "DBE",
+    "AImod",
+    "N",
+    "DBE/C",
+    "N/C",
+    "P/C",
+    "P"
+  ],
+  "features_retained": [
+    "O/C",
+    "MW",
+    "H",
+    "DBE-O",
+    "NOSC",
+    "S/C",
+    "O",
+    "C",
+    "H/C",
+    "DBE",
+    "AImod",
+    "N/C",
+    "P/C"
+  ],
+  "class_order": [
+    "precursors",
+    "products",
+    "resistant"
+  ],
+  "audit": {
+    "source_mode": "processed_dataset",
+    "influent_formula_count": 2779,
+    "effluent_formula_count": 2872,
+    "union_formula_count": 3792,
+    "shared_formula_count": 1859,
+    "influent_only_count": 920,
+    "effluent_only_count": 1013,
+    "shared_fc_below_lower": 352,
+    "shared_fc_within_thresholds": 1359,
+    "shared_fc_above_upper": 148,
+    "formula_descriptor_mismatches": "checked during raw-data processing",
+    "influent_intensity_sum": null,
+    "effluent_intensity_sum": null,
+    "influent_recomputed_RI_sum": 0.9999999999999032,
+    "effluent_recomputed_RI_sum": 0.9999999999999136,
+    "missing_predictor_values": {
+      "AImod": 1
+    }
+  },
+  "best_parameters": {
+    "random_forest": {
+      "model__max_depth": null,
+      "model__max_features": "sqrt",
+      "model__min_samples_leaf": 2,
+      "model__n_estimators": 300
+    },
+    "logistic_regression": {
+      "model__C": 10.0
+    }
+  },
+  "versions": {
+    "python": "3.12.5",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.5.2",
+    "matplotlib": "3.9.2",
+    "seaborn": "0.13.2",
+    "joblib": "1.4.2",
+    "shap": "0.52.0"
+  },
+  "shap_skipped": false
+}
